@@ -1,0 +1,251 @@
+{
+  "generated_assertions": [
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/assertions/silver_customer_address_pk_not_null.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/assertions/silver_customer_address_duplicates.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/assertions/silver_transactions_pk_not_null.sqlx",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/assertions/silver_transactions_duplicates.sqlx",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/assertions/silver_txn_payment_details_pk_not_null.sqlx",
+      "recipe_name": "txn_payment_details_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/assertions/silver_txn_payment_details_duplicates.sqlx",
+      "recipe_name": "txn_payment_details_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/assertions/silver_txn_payments_pk_not_null.sqlx",
+      "recipe_name": "txn_payments_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/assertions/silver_txn_payments_duplicates.sqlx",
+      "recipe_name": "txn_payments_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_customer_address_pk_not_null.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_customer_address_duplicates.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_merchant_transactions_pk_not_null.sqlx",
+      "recipe_name": "merchant_transactions_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_merchant_transactions_duplicates.sqlx",
+      "recipe_name": "merchant_transactions_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_payment_transactions_pk_not_null.sqlx",
+      "recipe_name": "payment_transactions_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_payment_transactions_duplicates.sqlx",
+      "recipe_name": "payment_transactions_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_transactions_pk_not_null.sqlx",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_transactions_duplicates.sqlx",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_txn_payment_details_pk_not_null.sqlx",
+      "recipe_name": "txn_payment_details_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_txn_payment_details_duplicates.sqlx",
+      "recipe_name": "txn_payment_details_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_txn_payments_pk_not_null.sqlx",
+      "recipe_name": "txn_payments_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/assertions/silver_txn_payments_duplicates.sqlx",
+      "recipe_name": "txn_payments_standalone_entity"
+    }
+  ],
+  "generated_at": "2026-06-13T09:58:56.161823+00:00",
+  "generated_bronze_declarations": {
+    "|bronze_egy|payment_transactions": {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/bronze/egy_payment_transactions.sqlx",
+      "recipe_name": "payment_transactions_standalone_entity"
+    },
+    "|bronze_ksa|customer_address": {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/bronze/ksa_customer_address.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    "|bronze_ksa|merchant_transactions": {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/bronze/ksa_merchant_transactions.sqlx",
+      "recipe_name": "merchant_transactions_standalone_entity"
+    },
+    "|bronze_ksa|transactions": {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/bronze/ksa_transactions.sqlx",
+      "recipe_name": "transactions_regional_union"
+    },
+    "|bronze_ksa|txn_payment_details": {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/bronze/ksa_txn_payment_details.sqlx",
+      "recipe_name": "txn_payment_details_standalone_entity"
+    },
+    "|bronze_ksa|txn_payments": {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/bronze/ksa_txn_payments.sqlx",
+      "recipe_name": "txn_payments_standalone_entity"
+    },
+    "|bronze_uae|customer_address": {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/bronze/uae_customer_address.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    "|bronze_uae|transactions_v2": {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/bronze/uae_transactions_v2.sqlx",
+      "recipe_name": "transactions_regional_union"
+    }
+  },
+  "generated_reconciliation_files": [
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/reconciliation/customer_address_complex_mapping_reconciliation.sql",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/reconciliation/transactions_regional_union_reconciliation.sql",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/reconciliation/txn_payment_details_standalone_entity_reconciliation.sql",
+      "recipe_name": "txn_payment_details_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/reconciliation/txn_payments_standalone_entity_reconciliation.sql",
+      "recipe_name": "txn_payments_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/reconciliation/customer_address_complex_mapping_reconciliation.sql",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/reconciliation/merchant_transactions_standalone_entity_reconciliation.sql",
+      "recipe_name": "merchant_transactions_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/reconciliation/payment_transactions_standalone_entity_reconciliation.sql",
+      "recipe_name": "payment_transactions_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/reconciliation/transactions_regional_union_reconciliation.sql",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/reconciliation/txn_payment_details_standalone_entity_reconciliation.sql",
+      "recipe_name": "txn_payment_details_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/reconciliation/txn_payments_standalone_entity_reconciliation.sql",
+      "recipe_name": "txn_payments_standalone_entity"
+    }
+  ],
+  "generated_silver_models": [
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/silver/silver_global_silver_customer_address.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/silver/silver_global_silver_transactions.sqlx",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/silver/silver_ksa_silver_txn_payment_details.sqlx",
+      "recipe_name": "txn_payment_details_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:50:41.459413+00:00",
+      "path": "output/dataform/definitions/silver/silver_ksa_silver_txn_payments.sqlx",
+      "recipe_name": "txn_payments_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/silver/silver_global_silver_customer_address.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/silver/silver_ksa_silver_merchant_transactions.sqlx",
+      "recipe_name": "merchant_transactions_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/silver/silver_egy_silver_payment_transactions.sqlx",
+      "recipe_name": "payment_transactions_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/silver/silver_global_silver_transactions.sqlx",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/silver/silver_ksa_silver_txn_payment_details.sqlx",
+      "recipe_name": "txn_payment_details_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-13T09:58:56.161823+00:00",
+      "path": "output/dataform/definitions/silver/silver_ksa_silver_txn_payments.sqlx",
+      "recipe_name": "txn_payments_standalone_entity"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+config {
+  type: "table",
+  schema: "silver_global",
+  name: "silver_transactions"
+}
+
+WITH
+source_0 AS (
+  SELECT
+    TRIM(CAST(currency AS STRING)) AS `currency`,
+    TRIM(CAST(customer_id AS STRING)) AS `customer_id`,
+    TRIM(CAST(merchant_id AS STRING)) AS `merchant_id`,
+    ROUND(SAFE_CAST(txn_amount AS NUMERIC), 2) AS `txn_amount`,
+    TRIM(CAST(txn_id AS STRING)) AS `txn_id`,
+    TRIM(CAST(txn_status AS STRING)) AS `txn_status`,
+    SAFE_CAST(txn_timestamp AS TIMESTAMP) AS `txn_timestamp`,
+    SAFE_CAST(updated_at AS TIMESTAMP) AS `updated_at`,
+    'KSA' AS `_source_region`,
+    'POSTGRES_KSA' AS `_source_system`,
+    'bronze_ksa.transactions' AS `_source_table`,
+    CURRENT_TIMESTAMP() AS `_processed_at`,
+    CAST(NULL AS STRING) AS `_batch_id`
+  FROM ${ref("bronze_ksa", "transactions")}
+),
+source_1 AS (
+  SELECT
+    TRIM(CAST(currency_code AS STRING)) AS `currency`,
+    TRIM(CAST(cust_id AS STRING)) AS `customer_id`,
+    TRIM(CAST(merchant_code AS STRING)) AS `merchant_id`,
+    ROUND(SAFE_CAST(amount AS NUMERIC), 2) AS `txn_amount`,
+    TRIM(CAST(transaction_id AS STRING)) AS `txn_id`,
+    TRIM(CAST(status AS STRING)) AS `txn_status`,
+    SAFE_CAST(transaction_time AS TIMESTAMP) AS `txn_timestamp`,
+    SAFE_CAST(modified_at AS TIMESTAMP) AS `updated_at`,
+    'UAE' AS `_source_region`,
+    'POSTGRES_UAE' AS `_source_system`,
+    'bronze_uae.transactions_v2' AS `_source_table`,
+    CURRENT_TIMESTAMP() AS `_processed_at`,
+    CAST(NULL AS STRING) AS `_batch_id`
+  FROM ${ref("bronze_uae", "transactions_v2")}
+)
+, unioned AS (
+  SELECT * FROM source_0 UNION ALL
+  SELECT * FROM source_1
+)
+, ranked AS (
+  SELECT
+    *,
+    ROW_NUMBER() OVER (
+      PARTITION BY `_source_region`, `_source_system`, `txn_id`
+      ORDER BY `updated_at` DESC
+    ) AS `_row_number`
+  FROM unioned
+)
+SELECT
+  `currency`,
+  `customer_id`,
+  `merchant_id`,
+  `txn_amount`,
+  `txn_id`,
+  `txn_status`,
+  `txn_timestamp`,
+  `updated_at`,
+  `_source_region`,
+  `_source_system`,
+  `_source_table`,
+  `_processed_at`,
+  `_batch_id`
+FROM ranked
+WHERE `_row_number` = 1
+  AND `txn_id` IS NOT NULL

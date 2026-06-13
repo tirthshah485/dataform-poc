@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_uae",
+  name: "customer_address"
+}

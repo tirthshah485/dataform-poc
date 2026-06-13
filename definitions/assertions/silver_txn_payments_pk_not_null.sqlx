@@ -1,0 +1,9 @@
+config {
+  type: "assertion"
+}
+
+SELECT
+  *
+FROM ${ref("silver_ksa", "silver_txn_payments")}
+WHERE
+  `payment_id` IS NULL

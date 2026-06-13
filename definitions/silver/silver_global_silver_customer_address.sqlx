@@ -1,0 +1,71 @@
+config {
+  type: "table",
+  schema: "silver_global",
+  name: "silver_customer_address"
+}
+
+WITH
+source_0 AS (
+  SELECT
+    TRIM(CAST(customer_id AS STRING)) AS `customer_id`,
+    SAFE_CAST(updated_at AS TIMESTAMP) AS `updated_at`,
+    TRIM(CAST(full_address AS STRING)) AS `address_full`,
+    CAST(NULL AS STRING) AS `address_name`,
+    CAST(NULL AS STRING) AS `address_city`,
+    CAST(NULL AS STRING) AS `address_state`,
+    TRIM(CAST(country AS STRING)) AS `country`,
+    'UNPARSED_FULL_ADDRESS' AS `address_mapping_status`,
+    'KSA' AS `_source_region`,
+    'POSTGRES_KSA' AS `_source_system`,
+    'bronze_ksa.customer_address' AS `_source_table`,
+    CURRENT_TIMESTAMP() AS `_processed_at`,
+    CAST(NULL AS STRING) AS `_batch_id`
+  FROM ${ref("bronze_ksa", "customer_address")}
+),
+source_1 AS (
+  SELECT
+    TRIM(CAST(customer_id AS STRING)) AS `customer_id`,
+    SAFE_CAST(updated_at AS TIMESTAMP) AS `updated_at`,
+    ARRAY_TO_STRING(ARRAY(SELECT part FROM UNNEST([NULLIF(TRIM(CAST(address_name AS STRING)), ''), NULLIF(TRIM(CAST(city AS STRING)), ''), NULLIF(TRIM(CAST(state AS STRING)), '')]) AS part WHERE part IS NOT NULL), ', ') AS `address_full`,
+    TRIM(CAST(address_name AS STRING)) AS `address_name`,
+    TRIM(CAST(city AS STRING)) AS `address_city`,
+    TRIM(CAST(state AS STRING)) AS `address_state`,
+    TRIM(CAST(country AS STRING)) AS `country`,
+    'STRUCTURED_ADDRESS' AS `address_mapping_status`,
+    'UAE' AS `_source_region`,
+    'POSTGRES_UAE' AS `_source_system`,
+    'bronze_uae.customer_address' AS `_source_table`,
+    CURRENT_TIMESTAMP() AS `_processed_at`,
+    CAST(NULL AS STRING) AS `_batch_id`
+  FROM ${ref("bronze_uae", "customer_address")}
+)
+, unioned AS (
+  SELECT * FROM source_0 UNION ALL
+  SELECT * FROM source_1
+)
+, ranked AS (
+  SELECT
+    *,
+    ROW_NUMBER() OVER (
+      PARTITION BY `_source_region`, `_source_system`, `customer_id`
+      ORDER BY `updated_at` DESC
+    ) AS `_row_number`
+  FROM unioned
+)
+SELECT
+  `customer_id`,
+  `updated_at`,
+  `address_full`,
+  `address_name`,
+  `address_city`,
+  `address_state`,
+  `country`,
+  `address_mapping_status`,
+  `_source_region`,
+  `_source_system`,
+  `_source_table`,
+  `_processed_at`,
+  `_batch_id`
+FROM ranked
+WHERE `_row_number` = 1
+  AND `customer_id` IS NOT NULL
