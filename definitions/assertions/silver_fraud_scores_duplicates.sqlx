@@ -1,0 +1,10 @@
+config {
+  type: "assertion"
+}
+
+SELECT
+  `score_id`
+FROM ${ref("silver_ksa", "silver_fraud_scores")}
+GROUP BY
+  `score_id`
+HAVING COUNT(*) > 1

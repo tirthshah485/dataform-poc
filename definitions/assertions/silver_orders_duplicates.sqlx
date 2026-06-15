@@ -1,0 +1,10 @@
+config {
+  type: "assertion"
+}
+
+SELECT
+  `order_id`
+FROM ${ref("silver_uae", "silver_orders")}
+GROUP BY
+  `order_id`
+HAVING COUNT(*) > 1

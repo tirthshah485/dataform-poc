@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_uae",
+  name: "merchants",
+  tags: ["bronze", "bronze_uae"]}

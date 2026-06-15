@@ -1,0 +1,10 @@
+config {
+  type: "assertion"
+}
+
+SELECT
+  *
+FROM ${ref("silver_global", "silver_refunds")}
+WHERE
+  `_source_region` IS NULL OR
+  `refund_id` IS NULL

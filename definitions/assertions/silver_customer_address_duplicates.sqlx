@@ -1,0 +1,12 @@
+config {
+  type: "assertion"
+}
+
+SELECT
+  `_source_region`,
+  `address_id`
+FROM ${ref("silver_global", "silver_customer_address")}
+GROUP BY
+  `_source_region`,
+  `address_id`
+HAVING COUNT(*) > 1

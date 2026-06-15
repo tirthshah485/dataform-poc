@@ -1,0 +1,9 @@
+config {
+  type: "assertion"
+}
+
+SELECT
+  *
+FROM ${ref("silver_uae", "silver_order_items")}
+WHERE
+  `order_item_id` IS NULL

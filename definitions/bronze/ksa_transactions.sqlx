@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_ksa",
+  name: "transactions",
+  tags: ["bronze", "bronze_ksa", "silver", "transactions_regional_union"]}

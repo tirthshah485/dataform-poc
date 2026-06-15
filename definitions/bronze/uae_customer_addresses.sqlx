@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_uae",
+  name: "customer_addresses",
+  tags: ["bronze", "bronze_uae", "silver", "customer_address_complex_mapping"]}
