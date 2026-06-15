@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_ksa",
+  name: "payout_accounts",
+  tags: ["bronze", "bronze_ksa", "silver", "payout_accounts_join"]}

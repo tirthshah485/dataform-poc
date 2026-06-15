@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_global",
+  name: "exchange_rates",
+  tags: ["bronze", "bronze_global", "silver", "exchange_rates_standalone_entity"]}

@@ -4,19 +4,15 @@
 -- Reconciliation policy: raw_source_rows_are_an_upper_bound
 
 WITH source_counts AS (
-  SELECT "bronze_egy.transactions" AS table_name, COUNT(*) AS row_count
-  FROM `bronze_egy.transactions` UNION ALL
-  SELECT "bronze_ksa.transactions" AS table_name, COUNT(*) AS row_count
-  FROM `bronze_ksa.transactions` UNION ALL
-  SELECT "bronze_uae.transactions" AS table_name, COUNT(*) AS row_count
-  FROM `bronze_uae.transactions`
+  SELECT "bronze_uae.order_items" AS table_name, COUNT(*) AS row_count
+  FROM `bronze_uae.order_items`
 ),
 source_total AS (
   SELECT SUM(row_count) AS row_count FROM source_counts
 ),
 target_counts AS (
-  SELECT "silver_global.silver_transactions" AS table_name, COUNT(*) AS row_count
-  FROM `silver_global.silver_transactions`
+  SELECT "silver_uae.silver_order_items" AS table_name, COUNT(*) AS row_count
+  FROM `silver_uae.silver_order_items`
 )
 SELECT
   "source_detail" AS side,

@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_ksa",
+  name: "transactions_archive",
+  tags: ["bronze", "bronze_ksa"]}

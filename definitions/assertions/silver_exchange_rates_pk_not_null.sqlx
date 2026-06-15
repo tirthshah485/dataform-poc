@@ -1,0 +1,9 @@
+config {
+  type: "assertion"
+}
+
+SELECT
+  *
+FROM ${ref("silver_global", "silver_exchange_rates")}
+WHERE
+  `rate_id` IS NULL

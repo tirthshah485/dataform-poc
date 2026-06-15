@@ -1,9 +1,0 @@
-config {
-  type: "assertion"
-}
-
-SELECT
-  *
-FROM ${ref("silver_ksa", "silver_merchant_transactions")}
-WHERE
-  `txn_id` IS NULL

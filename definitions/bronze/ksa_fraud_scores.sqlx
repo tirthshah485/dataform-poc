@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_ksa",
+  name: "fraud_scores",
+  tags: ["bronze", "bronze_ksa", "silver", "fraud_scores_standalone_entity"]}

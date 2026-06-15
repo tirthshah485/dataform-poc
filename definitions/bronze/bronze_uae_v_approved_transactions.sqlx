@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_uae",
+  name: "v_approved_transactions",
+  tags: ["bronze", "bronze_uae", "view", "declaration_only"]}

@@ -6,8 +6,10 @@
 WITH source_counts AS (
   SELECT "bronze_ksa.customer_address" AS table_name, COUNT(*) AS row_count
   FROM `bronze_ksa.customer_address` UNION ALL
-  SELECT "bronze_uae.customer_address" AS table_name, COUNT(*) AS row_count
-  FROM `bronze_uae.customer_address`
+  SELECT "bronze_uae.customer_addresses" AS table_name, COUNT(*) AS row_count
+  FROM `bronze_uae.customer_addresses` UNION ALL
+  SELECT "bronze_egy.customer_addresses" AS table_name, COUNT(*) AS row_count
+  FROM `bronze_egy.customer_addresses`
 ),
 source_total AS (
   SELECT SUM(row_count) AS row_count FROM source_counts

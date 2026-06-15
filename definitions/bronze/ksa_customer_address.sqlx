@@ -1,5 +1,5 @@
 config {
   type: "declaration",
   schema: "bronze_ksa",
-  name: "customer_address"
-}
+  name: "customer_address",
+  tags: ["bronze", "bronze_ksa", "silver", "customer_address_complex_mapping"]}

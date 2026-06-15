@@ -4,7 +4,7 @@ config {
 
 SELECT
   *
-FROM ${ref("silver_global", "silver_customer_address")}
+FROM ${ref("silver_global", "silver_settlements")}
 WHERE
   `_source_region` IS NULL OR
-  `address_id` IS NULL
+  `settlement_id` IS NULL

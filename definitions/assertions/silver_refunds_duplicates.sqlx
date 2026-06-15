@@ -4,9 +4,9 @@ config {
 
 SELECT
   `_source_region`,
-  `address_id`
-FROM ${ref("silver_global", "silver_customer_address")}
+  `refund_id`
+FROM ${ref("silver_global", "silver_refunds")}
 GROUP BY
   `_source_region`,
-  `address_id`
+  `refund_id`
 HAVING COUNT(*) > 1

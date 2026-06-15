@@ -1,5 +1,0 @@
-config {
-  type: "declaration",
-  schema: "bronze_ksa",
-  name: "txn_payments"
-}

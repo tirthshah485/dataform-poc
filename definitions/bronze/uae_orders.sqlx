@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_uae",
+  name: "orders",
+  tags: ["bronze", "bronze_uae", "silver", "orders_standalone_entity"]}
