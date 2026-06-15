@@ -31,6 +31,27 @@
           "message": "SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.",
           "recipe_name": "customer_address_complex_mapping",
           "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_ksa|customer_address",
+          "recipe_name": "customer_address_complex_mapping",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_uae|customer_addresses",
+          "recipe_name": "customer_address_complex_mapping",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_egy|customer_addresses",
+          "recipe_name": "customer_address_complex_mapping",
+          "severity": "warning"
         }
       ],
       "recipe_name": "customer_address_complex_mapping",
@@ -45,6 +66,13 @@
           "message": "SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.",
           "recipe_name": "exchange_rates_standalone_entity",
           "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_global|exchange_rates",
+          "recipe_name": "exchange_rates_standalone_entity",
+          "severity": "warning"
         }
       ],
       "recipe_name": "exchange_rates_standalone_entity",
@@ -57,6 +85,13 @@
           "artifact_path": null,
           "category": "recipe_warning",
           "message": "SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.",
+          "recipe_name": "fraud_scores_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_ksa|fraud_scores",
           "recipe_name": "fraud_scores_standalone_entity",
           "severity": "warning"
         }
@@ -87,6 +122,13 @@
           "message": "Amount column line_amount does not use ABS(); confirm whether negative values are allowed.",
           "recipe_name": "order_items_standalone_entity",
           "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_uae|order_items",
+          "recipe_name": "order_items_standalone_entity",
+          "severity": "warning"
         }
       ],
       "recipe_name": "order_items_standalone_entity",
@@ -113,6 +155,13 @@
           "artifact_path": null,
           "category": "recipe_warning",
           "message": "Amount column order_amount does not use ABS(); confirm whether negative values are allowed.",
+          "recipe_name": "orders_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_uae|orders",
           "recipe_name": "orders_standalone_entity",
           "severity": "warning"
         }
@@ -143,6 +192,20 @@
           "message": "Manual review override used for join: payout_accounts_join.payout_account_routing",
           "recipe_name": "payout_accounts_join",
           "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_ksa|payout_accounts",
+          "recipe_name": "payout_accounts_join",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_ksa|payout_account_routing",
+          "recipe_name": "payout_accounts_join",
+          "severity": "warning"
         }
       ],
       "recipe_name": "payout_accounts_join",
@@ -171,6 +234,20 @@
           "message": "Amount column refund_amount does not use ABS(); confirm whether negative values are allowed.",
           "recipe_name": "refunds_regional_union",
           "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_ksa|refunds",
+          "recipe_name": "refunds_regional_union",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_uae|refunds",
+          "recipe_name": "refunds_regional_union",
+          "severity": "warning"
         }
       ],
       "recipe_name": "refunds_regional_union",
@@ -182,6 +259,13 @@
         {
           "artifact_path": null,
           "category": "amount_policy",
+          "message": "Amount column net_amount has no explicit amount_policy.",
+          "recipe_name": "settlements_regional_union",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "amount_policy",
           "message": "Amount column gross_amount has no explicit amount_policy.",
           "recipe_name": "settlements_regional_union",
           "severity": "warning"
@@ -190,13 +274,6 @@
           "artifact_path": null,
           "category": "amount_policy",
           "message": "Amount column fee_amount has no explicit amount_policy.",
-          "recipe_name": "settlements_regional_union",
-          "severity": "warning"
-        },
-        {
-          "artifact_path": null,
-          "category": "amount_policy",
-          "message": "Amount column net_amount has no explicit amount_policy.",
           "recipe_name": "settlements_regional_union",
           "severity": "warning"
         },
@@ -225,6 +302,27 @@
           "artifact_path": null,
           "category": "recipe_warning",
           "message": "Amount column net_amount does not use ABS(); confirm whether negative values are allowed.",
+          "recipe_name": "settlements_regional_union",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_egy|settlements",
+          "recipe_name": "settlements_regional_union",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_ksa|settlements",
+          "recipe_name": "settlements_regional_union",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_uae|settlements",
           "recipe_name": "settlements_regional_union",
           "severity": "warning"
         }
@@ -266,14 +364,14 @@
         {
           "artifact_path": null,
           "category": "amount_policy",
-          "message": "Amount column fee_amount has no explicit amount_policy.",
+          "message": "Amount column txn_amount has no explicit amount_policy.",
           "recipe_name": "transactions_regional_union",
           "severity": "warning"
         },
         {
           "artifact_path": null,
           "category": "amount_policy",
-          "message": "Amount column txn_amount has no explicit amount_policy.",
+          "message": "Amount column fee_amount has no explicit amount_policy.",
           "recipe_name": "transactions_regional_union",
           "severity": "warning"
         },
@@ -295,6 +393,27 @@
           "artifact_path": null,
           "category": "recipe_warning",
           "message": "Amount column txn_amount does not use ABS(); confirm whether negative values are allowed.",
+          "recipe_name": "transactions_regional_union",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_egy|transactions",
+          "recipe_name": "transactions_regional_union",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_ksa|transactions",
+          "recipe_name": "transactions_regional_union",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Bronze declaration already present in manifest; skipped: |bronze_uae|transactions",
           "recipe_name": "transactions_regional_union",
           "severity": "warning"
         },
@@ -324,5 +443,5 @@
       "score": 90
     }
   ],
-  "warning_count": 31
+  "warning_count": 48
 }

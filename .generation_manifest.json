@@ -79,9 +79,89 @@
       "generated_at": "2026-06-15T06:07:07.404414+00:00",
       "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_transactions_duplicates.sqlx",
       "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_customer_address_pk_not_null.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_customer_address_duplicates.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_exchange_rates_pk_not_null.sqlx",
+      "recipe_name": "exchange_rates_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_exchange_rates_duplicates.sqlx",
+      "recipe_name": "exchange_rates_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_fraud_scores_pk_not_null.sqlx",
+      "recipe_name": "fraud_scores_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_fraud_scores_duplicates.sqlx",
+      "recipe_name": "fraud_scores_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_order_items_pk_not_null.sqlx",
+      "recipe_name": "order_items_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_order_items_duplicates.sqlx",
+      "recipe_name": "order_items_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_orders_pk_not_null.sqlx",
+      "recipe_name": "orders_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_orders_duplicates.sqlx",
+      "recipe_name": "orders_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_refunds_pk_not_null.sqlx",
+      "recipe_name": "refunds_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_refunds_duplicates.sqlx",
+      "recipe_name": "refunds_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_settlements_pk_not_null.sqlx",
+      "recipe_name": "settlements_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_settlements_duplicates.sqlx",
+      "recipe_name": "settlements_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_transactions_pk_not_null.sqlx",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_transactions_duplicates.sqlx",
+      "recipe_name": "transactions_regional_union"
     }
   ],
-  "generated_at": "2026-06-15T06:07:07.404414+00:00",
+  "generated_at": "2026-06-15T07:10:00.974123+00:00",
   "generated_bronze_declarations": {
     "|bronze_egy|customer_addresses": {
       "generated_at": "2026-06-15T06:07:07.404414+00:00",
@@ -222,6 +302,51 @@
       "generated_at": "2026-06-15T06:07:07.404414+00:00",
       "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/transactions_regional_union_reconciliation.sql",
       "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/customer_address_complex_mapping_reconciliation.sql",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/exchange_rates_standalone_entity_reconciliation.sql",
+      "recipe_name": "exchange_rates_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/fraud_scores_standalone_entity_reconciliation.sql",
+      "recipe_name": "fraud_scores_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/order_items_standalone_entity_reconciliation.sql",
+      "recipe_name": "order_items_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/orders_standalone_entity_reconciliation.sql",
+      "recipe_name": "orders_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/payout_accounts_join_reconciliation.sql",
+      "recipe_name": "payout_accounts_join"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/refunds_regional_union_reconciliation.sql",
+      "recipe_name": "refunds_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/settlements_regional_union_reconciliation.sql",
+      "recipe_name": "settlements_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/transactions_regional_union_reconciliation.sql",
+      "recipe_name": "transactions_regional_union"
     }
   ],
   "generated_silver_models": [
@@ -267,6 +392,51 @@
     },
     {
       "generated_at": "2026-06-15T06:07:07.404414+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_global_silver_transactions.sqlx",
+      "recipe_name": "transactions_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_global_silver_customer_address.sqlx",
+      "recipe_name": "customer_address_complex_mapping"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_global_silver_exchange_rates.sqlx",
+      "recipe_name": "exchange_rates_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_ksa_silver_fraud_scores.sqlx",
+      "recipe_name": "fraud_scores_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_uae_silver_order_items.sqlx",
+      "recipe_name": "order_items_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_uae_silver_orders.sqlx",
+      "recipe_name": "orders_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_ksa_silver_payout_accounts.sqlx",
+      "recipe_name": "payout_accounts_join"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_global_silver_refunds.sqlx",
+      "recipe_name": "refunds_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_global_silver_settlements.sqlx",
+      "recipe_name": "settlements_regional_union"
+    },
+    {
+      "generated_at": "2026-06-15T07:10:00.974123+00:00",
       "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_global_silver_transactions.sqlx",
       "recipe_name": "transactions_regional_union"
     }
