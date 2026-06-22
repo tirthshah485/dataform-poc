@@ -1,8 +1,8 @@
 # SQLX Safety Report
 
 - quality_gate: False
-- blocker_count: 3
-- warning_count: 48
+- blocker_count: 0
+- warning_count: 0
 - gate_failed: False
 
 ## Compile Check
@@ -12,103 +12,4 @@
 
 ## Recipe Safety
 
-### customer_address_complex_mapping
-
-- score: 69
-- band: high_risk
-- blocker [pii_policy]: PII was detected but pii_policy.status is not approved.
-- warning [recipe_warning]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_ksa|customer_address
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_uae|customer_addresses
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_egy|customer_addresses
-
-### exchange_rates_standalone_entity
-
-- score: 100
-- band: ready
-- warning [recipe_warning]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_global|exchange_rates
-
-### fraud_scores_standalone_entity
-
-- score: 100
-- band: ready
-- warning [recipe_warning]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_ksa|fraud_scores
-
-### order_items_standalone_entity
-
-- score: 95
-- band: ready
-- warning [amount_policy]: Amount column line_amount has no explicit amount_policy.
-- warning [recipe_warning]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [recipe_warning]: Amount column line_amount does not use ABS(); confirm whether negative values are allowed.
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_uae|order_items
-
-### orders_standalone_entity
-
-- score: 95
-- band: ready
-- warning [amount_policy]: Amount column order_amount has no explicit amount_policy.
-- warning [recipe_warning]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [recipe_warning]: Amount column order_amount does not use ABS(); confirm whether negative values are allowed.
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_uae|orders
-
-### payout_accounts_join
-
-- score: 54
-- band: high_risk
-- blocker [pii_policy]: PII was detected but pii_policy.status is not approved.
-- warning [recipe_warning]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [manual_review]: Manual review override used for join: payout_accounts_join.payout_account_routing
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_ksa|payout_accounts
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_ksa|payout_account_routing
-
-### refunds_regional_union
-
-- score: 95
-- band: ready
-- warning [amount_policy]: Amount column refund_amount has no explicit amount_policy.
-- warning [recipe_warning]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [recipe_warning]: Amount column refund_amount does not use ABS(); confirm whether negative values are allowed.
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_ksa|refunds
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_uae|refunds
-
-### settlements_regional_union
-
-- score: 85
-- band: review
-- warning [amount_policy]: Amount column net_amount has no explicit amount_policy.
-- warning [amount_policy]: Amount column gross_amount has no explicit amount_policy.
-- warning [amount_policy]: Amount column fee_amount has no explicit amount_policy.
-- warning [recipe_warning]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [recipe_warning]: Amount column fee_amount does not use ABS(); confirm whether negative values are allowed.
-- warning [recipe_warning]: Amount column gross_amount does not use ABS(); confirm whether negative values are allowed.
-- warning [recipe_warning]: Amount column net_amount does not use ABS(); confirm whether negative values are allowed.
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_egy|settlements
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_ksa|settlements
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_uae|settlements
-
-### transactions_archive_historical_archive
-
-- score: 69
-- band: high_risk
-- blocker [validation]: Unsupported or missing generation mode
-- warning [validation]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [validation]: Amount column txn_amount does not use ABS(); confirm whether negative values are allowed.
-
-### transactions_regional_union
-
-- score: 90
-- band: ready
-- warning [amount_policy]: Amount column txn_amount has no explicit amount_policy.
-- warning [amount_policy]: Amount column fee_amount has no explicit amount_policy.
-- warning [recipe_warning]: SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.
-- warning [recipe_warning]: Amount column fee_amount does not use ABS(); confirm whether negative values are allowed.
-- warning [recipe_warning]: Amount column txn_amount does not use ABS(); confirm whether negative values are allowed.
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_egy|transactions
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_ksa|transactions
-- warning [recipe_warning]: Bronze declaration already present in manifest; skipped: |bronze_uae|transactions
-- warning [sql_lint]: Key-like column auth_code is generated as typed NULL for at least one source. (/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_global_silver_transactions.sqlx)
-- warning [sql_lint]: Key-like column authorization_code is generated as typed NULL for at least one source. (/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_global_silver_transactions.sqlx)
-- warning [sql_lint]: Key-like column approval_code is generated as typed NULL for at least one source. (/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_global_silver_transactions.sqlx)
+- None
