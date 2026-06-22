@@ -1,0 +1,9 @@
+config {
+  type: "assertion"
+}
+
+SELECT
+  *
+FROM ${ref("silver_asia_south1", "silver_settlement_batches")}
+WHERE
+  `batch_id` IS NULL

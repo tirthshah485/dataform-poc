@@ -1,0 +1,153 @@
+{
+  "blocker_count": 1,
+  "compile_check": {
+    "blocker": false,
+    "command": [],
+    "enabled": false,
+    "exit_code": null,
+    "message": "",
+    "project_dir": null,
+    "status": "not_run",
+    "stderr": "",
+    "stdout": ""
+  },
+  "enabled": true,
+  "gate_failed": false,
+  "quality_gate": false,
+  "recipe_results": [
+    {
+      "band": "high_risk",
+      "findings": [
+        {
+          "artifact_path": null,
+          "category": "pii_policy",
+          "message": "PII was detected but pii_policy.status is not approved.",
+          "recipe_name": "customers_standalone_entity",
+          "severity": "blocker"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.",
+          "recipe_name": "customers_standalone_entity",
+          "severity": "warning"
+        }
+      ],
+      "recipe_name": "customers_standalone_entity",
+      "score": 69
+    },
+    {
+      "band": "ready",
+      "findings": [
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.",
+          "recipe_name": "merchants_standalone_entity",
+          "severity": "warning"
+        }
+      ],
+      "recipe_name": "merchants_standalone_entity",
+      "score": 100
+    },
+    {
+      "band": "review",
+      "findings": [
+        {
+          "artifact_path": null,
+          "category": "amount_policy",
+          "message": "Amount column fee_amount has no explicit amount_policy.",
+          "recipe_name": "settlement_batches_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "amount_policy",
+          "message": "Amount column total_amount has no explicit amount_policy.",
+          "recipe_name": "settlement_batches_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "amount_policy",
+          "message": "Amount column net_amount has no explicit amount_policy.",
+          "recipe_name": "settlement_batches_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.",
+          "recipe_name": "settlement_batches_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Amount column fee_amount does not use ABS(); confirm whether negative values are allowed.",
+          "recipe_name": "settlement_batches_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Amount column net_amount does not use ABS(); confirm whether negative values are allowed.",
+          "recipe_name": "settlement_batches_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Amount column total_amount does not use ABS(); confirm whether negative values are allowed.",
+          "recipe_name": "settlement_batches_standalone_entity",
+          "severity": "warning"
+        }
+      ],
+      "recipe_name": "settlement_batches_standalone_entity",
+      "score": 85
+    },
+    {
+      "band": "ready",
+      "findings": [
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.",
+          "recipe_name": "terminals_standalone_entity",
+          "severity": "warning"
+        }
+      ],
+      "recipe_name": "terminals_standalone_entity",
+      "score": 100
+    },
+    {
+      "band": "ready",
+      "findings": [
+        {
+          "artifact_path": null,
+          "category": "amount_policy",
+          "message": "Amount column txn_amount has no explicit amount_policy.",
+          "recipe_name": "transactions_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "SQLX may be generated, but production readiness remains not_ready until the profiling contract and other deployment gates pass.",
+          "recipe_name": "transactions_standalone_entity",
+          "severity": "warning"
+        },
+        {
+          "artifact_path": null,
+          "category": "recipe_warning",
+          "message": "Amount column txn_amount does not use ABS(); confirm whether negative values are allowed.",
+          "recipe_name": "transactions_standalone_entity",
+          "severity": "warning"
+        }
+      ],
+      "recipe_name": "transactions_standalone_entity",
+      "score": 95
+    }
+  ],
+  "warning_count": 13
+}

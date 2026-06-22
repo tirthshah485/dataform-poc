@@ -1,0 +1,10 @@
+config {
+  type: "assertion"
+}
+
+SELECT
+  `batch_id`
+FROM ${ref("silver_asia_south1", "silver_settlement_batches")}
+GROUP BY
+  `batch_id`
+HAVING COUNT(*) > 1

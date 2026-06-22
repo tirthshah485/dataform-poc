@@ -1,0 +1,136 @@
+{
+  "generated_assertions": [
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_customers_pk_not_null.sqlx",
+      "recipe_name": "customers_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_customers_duplicates.sqlx",
+      "recipe_name": "customers_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_merchants_pk_not_null.sqlx",
+      "recipe_name": "merchants_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_merchants_duplicates.sqlx",
+      "recipe_name": "merchants_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_settlement_batches_pk_not_null.sqlx",
+      "recipe_name": "settlement_batches_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_settlement_batches_duplicates.sqlx",
+      "recipe_name": "settlement_batches_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_terminals_pk_not_null.sqlx",
+      "recipe_name": "terminals_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_terminals_duplicates.sqlx",
+      "recipe_name": "terminals_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_transactions_pk_not_null.sqlx",
+      "recipe_name": "transactions_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/assertions/silver_transactions_duplicates.sqlx",
+      "recipe_name": "transactions_standalone_entity"
+    }
+  ],
+  "generated_at": "2026-06-22T08:38:26.748495+00:00",
+  "generated_bronze_declarations": {
+    "|bronze_asia_south1|customers": {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/bronze/asia_south1_customers.sqlx",
+      "recipe_name": "customers_standalone_entity"
+    },
+    "|bronze_asia_south1|merchants": {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/bronze/asia_south1_merchants.sqlx",
+      "recipe_name": "merchants_standalone_entity"
+    },
+    "|bronze_asia_south1|settlement_batches": {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/bronze/asia_south1_settlement_batches.sqlx",
+      "recipe_name": "settlement_batches_standalone_entity"
+    },
+    "|bronze_asia_south1|terminals": {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/bronze/asia_south1_terminals.sqlx",
+      "recipe_name": "terminals_standalone_entity"
+    },
+    "|bronze_asia_south1|transactions": {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/bronze/asia_south1_transactions.sqlx",
+      "recipe_name": "transactions_standalone_entity"
+    }
+  },
+  "generated_reconciliation_files": [
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/customers_standalone_entity_reconciliation.sql",
+      "recipe_name": "customers_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/merchants_standalone_entity_reconciliation.sql",
+      "recipe_name": "merchants_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/settlement_batches_standalone_entity_reconciliation.sql",
+      "recipe_name": "settlement_batches_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/terminals_standalone_entity_reconciliation.sql",
+      "recipe_name": "terminals_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/reconciliation/transactions_standalone_entity_reconciliation.sql",
+      "recipe_name": "transactions_standalone_entity"
+    }
+  ],
+  "generated_silver_models": [
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_asia_south1_silver_customers.sqlx",
+      "recipe_name": "customers_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_asia_south1_silver_merchants.sqlx",
+      "recipe_name": "merchants_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_asia_south1_silver_settlement_batches.sqlx",
+      "recipe_name": "settlement_batches_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_asia_south1_silver_terminals.sqlx",
+      "recipe_name": "terminals_standalone_entity"
+    },
+    {
+      "generated_at": "2026-06-22T08:38:26.748495+00:00",
+      "path": "/Users/tirthshah/Documents/Data_Migartion/dataform-poc/definitions/silver/silver_asia_south1_silver_transactions.sqlx",
+      "recipe_name": "transactions_standalone_entity"
+    }
+  ]
+}

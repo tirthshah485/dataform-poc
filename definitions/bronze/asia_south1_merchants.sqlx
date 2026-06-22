@@ -1,0 +1,5 @@
+config {
+  type: "declaration",
+  schema: "bronze_asia_south1",
+  name: "merchants",
+  tags: ["bronze", "bronze_asia_south1", "silver", "merchants_standalone_entity"]}
