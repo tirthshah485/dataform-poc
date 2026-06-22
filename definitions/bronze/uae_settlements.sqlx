@@ -1,5 +1,0 @@
-config {
-  type: "declaration",
-  schema: "bronze_uae",
-  name: "settlements",
-  tags: ["bronze", "bronze_uae", "silver", "settlements_regional_union"]}

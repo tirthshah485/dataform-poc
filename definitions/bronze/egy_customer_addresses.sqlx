@@ -1,5 +1,0 @@
-config {
-  type: "declaration",
-  schema: "bronze_egy",
-  name: "customer_addresses",
-  tags: ["bronze", "bronze_egy", "silver", "customer_address_complex_mapping"]}

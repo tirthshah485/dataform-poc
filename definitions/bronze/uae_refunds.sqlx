@@ -1,5 +1,0 @@
-config {
-  type: "declaration",
-  schema: "bronze_uae",
-  name: "refunds",
-  tags: ["bronze", "bronze_uae", "silver", "refunds_regional_union"]}

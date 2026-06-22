@@ -1,5 +1,0 @@
-config {
-  type: "declaration",
-  schema: "bronze_asia_south1",
-  name: "customers",
-  tags: ["bronze", "bronze_asia_south1"]}
