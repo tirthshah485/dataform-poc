@@ -1,0 +1,5 @@
+defaultProject: se-ps1-appdev
+defaultLocation: asia-south1
+defaultDataset: dataform_poc
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.0
